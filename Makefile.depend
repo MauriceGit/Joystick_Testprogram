@@ -1,0 +1,16 @@
+hmd.o: hmd.c hmd.h joystick.h
+joystick.o: joystick.c joystick.h
+types.o: types.c stringOutput.h types.h
+quaternions.o: quaternions.c stringOutput.h types.h quaternions.h \
+ vector.h
+texture.o: texture.c texture.h types.h imageLoader/include/cgimage.h \
+ logic.h hmd.h joystick.h
+vector.o: vector.c stringOutput.h types.h
+main.o: main.c io.h scene.h types.h hmd.h joystick.h
+scene.o: scene.c stringOutput.h scene.h types.h logic.h hmd.h joystick.h \
+ texture.h vector.h
+io.o: io.c io.h scene.h types.h logic.h hmd.h joystick.h texture.h \
+ vector.h
+logic.o: logic.c stringOutput.h logic.h types.h hmd.h joystick.h \
+ texture.h scene.h vector.h quaternions.h
+stringOutput.o: stringOutput.c stringOutput.h
